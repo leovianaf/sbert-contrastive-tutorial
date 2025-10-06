@@ -40,9 +40,7 @@ A **Cosine Similarity Loss** ensina o modelo a produzir embeddings de sentenças
 - Se são diferentes, o cosseno deve ser próximo de -1.
 
 #### 💡 Fórmula da Similaridade do Cosseno:
-$$
-\text{cos\_sim}(A, B) = \frac{A \cdot B}{\|A\| \|B\|}
-$$
+**cos_sim(A, B) = (A · B) / (‖A‖ × ‖B‖)**
 
 ### 💡 Fórmula da Cosine Similarity Loss:
 $$
