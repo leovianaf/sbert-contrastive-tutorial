@@ -39,13 +39,11 @@ A **Cosine Similarity Loss** ensina o modelo a produzir embeddings de sentenças
 - Se duas sentenças têm significados parecidos, o cosseno entre seus embeddings deve ser próximo de 1.
 - Se são diferentes, o cosseno deve ser próximo de -1.
 
-#### 💡 Fórmula da Similaridade do Cosseno:
-**cos_sim(A, B) = (A · B) / (‖A‖ × ‖B‖)**
+### 💡 Fórmula da Similaridade do Cosseno:
+![cosine similarity](https://math.now.sh?from=\text{cos\_sim}(A%2C%20B)%20%3D%20\frac{A%20\cdot%20B}{%7C%7CA%7C%7C%20%7C%7CB%7C%7C})
 
 ### 💡 Fórmula da Cosine Similarity Loss:
-$$
-L = 1 - \cos(A, B)
-$$
+![cosine loss](https://math.now.sh?from=L%20%3D%201%20-%20\cos(A%2C%20B))
 
 Durante o treinamento, o modelo ajusta seus parâmetros para **maximizar a similaridade** entre embeddings de sentenças que são semanticamente próximas e **minimizar a similaridade** entre as que não são.
 
