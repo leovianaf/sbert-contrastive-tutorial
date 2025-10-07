@@ -37,6 +37,8 @@ Durante o treinamento, o modelo tenta **minimizar** essa perda, ajustando seus p
 
 ➡️ Assim, a função de perda é o mecanismo de aprendizado, ela informa ao modelo como melhorar.
 
+---
+
 ### 🔹 Cosine Similarity Loss
 
 A **Cosine Similarity Loss** ensina o modelo a produzir embeddings de sentenças de forma que o cosseno entre eles reflita sua **similaridade semântica**.
@@ -111,12 +113,12 @@ $$
 
 #### 📊 Comparativo geral
 
-| Função de Perda           | Estrutura de entrada       | Ideal para                         | Intuição principal                                    |
-| ------------------------- | -------------------------- | ---------------------------------- | ----------------------------------------------------- |
-| **CosineSimilarityLoss**  | Pares com score (contínuo) | Similaridade contínua (0–1)/(0-5)  | Aproximar embeddings proporcionalmente ao score       |
-| **ContrastiveLoss**       | Pares com label (0/1)      | Classificação binária              | Aproximar pares positivos, afastar negativos          |
-| **TripletLoss**           | Triplas (A, P, N)          | Relações relativas entre exemplos  | A é mais parecido com P do que com N                  |
-| **MNRL**                  | Pares positivos            | Binário com batches grandes        | Usa todos os pares do batch como negativos implícitos |
+| Função de Perda         | Estrutura de entrada       | Ideal para                         | Intuição principal                                    |
+| ----------------------- | -------------------------- | ---------------------------------- | ----------------------------------------------------- |
+| *CosineSimilarityLoss*  | Pares com score (contínuo) | Similaridade contínua (0–1)/(0-5)  | Aproximar embeddings proporcionalmente ao score       |
+| *ContrastiveLoss*       | Pares com label (0/1)      | Classificação binária              | Aproximar pares positivos, afastar negativos          |
+| *TripletLoss*           | Triplas (A, P, N)          | Relações relativas entre exemplos  | A é mais parecido com P do que com N                  |
+| *MNRL*                  | Pares positivos            | Binário com batches grandes        | Usa todos os pares do batch como negativos implícitos |
 
 ---
 
