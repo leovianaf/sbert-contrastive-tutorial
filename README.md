@@ -1,6 +1,6 @@
 # 🧠 Tutorial: Sentence-BERT (sBERT) com Cosine Similarity Loss e Triplet Loss
 
-Este repositório demonstra como treinar e avaliar modelos Sentence-BERT (sBERT) para medir similaridade entre sentenças em português, utilizando duas funções de perda distintas:
+Este repositório demonstra como treinar e avaliar modelos Sentence-BERT (sBERT) para medir similaridade entre sentenças, utilizando duas funções de perda distintas:
 - **Cosine Similarity Loss** e **Triplet Loss**, da biblioteca [`sentence-transformers`](https://www.sbert.net/).
 
 ---
