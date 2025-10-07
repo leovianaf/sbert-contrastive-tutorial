@@ -51,6 +51,8 @@ $$
 
 Durante o treinamento, o modelo ajusta seus parâmetros para **maximizar a similaridade** entre embeddings de sentenças que são semanticamente próximas e **minimizar a similaridade** entre as que não são.
 
+---
+
 ### 🔺 Triplet Loss
 
 A **Triplet Loss** compara três frases por vez:
@@ -65,6 +67,8 @@ L = \max(0, \; d(A, P) - d(A, N) + \text{margin})
 $$
 
 Isso força os embeddings de A e P a ficarem mais **próximos**, e os de A e N, mais **distantes**.
+
+---
 
 ### 🧩 Contrastive Loss
 
@@ -83,6 +87,8 @@ Onde:
 - **𝑌** é o rótulo (0 ou 1);
 - **𝐷** é a distância entre os embeddings (geralmente Euclidiana);
 - **𝑚** é a margem mínima de separação.
+
+---
 
 ### 🔶 Multiple Negatives Ranking Loss (MNRL)
 
@@ -105,12 +111,12 @@ $$
 
 #### 📊 Comparativo geral
 
-| Função de Perda                  | Estrutura de entrada       | Ideal para                         | Intuição principal                                    |
-| -------------------------------- | -------------------------- | ---------------------------------- | ----------------------------------------------------- |
-| **CosineSimilarityLoss**         | Pares com score (contínuo) | Similaridade contínua (0–1)/(0-5)  | Aproximar embeddings proporcionalmente ao score       |
-| **ContrastiveLoss**              | Pares com label (0/1)      | Classificação binária              | Aproximar pares positivos, afastar negativos          |
-| **TripletLoss**                  | Triplas (A, P, N)          | Relações relativas entre exemplos  | A é mais parecido com P do que com N                  |
-| **MultipleNegativesRankingLoss** | Pares positivos            | Binário com batches grandes        | Usa todos os pares do batch como negativos implícitos |
+| Função de Perda           | Estrutura de entrada       | Ideal para                         | Intuição principal                                    |
+| ------------------------- | -------------------------- | ---------------------------------- | ----------------------------------------------------- |
+| **CosineSimilarityLoss**  | Pares com score (contínuo) | Similaridade contínua (0–1)/(0-5)  | Aproximar embeddings proporcionalmente ao score       |
+| **ContrastiveLoss**       | Pares com label (0/1)      | Classificação binária              | Aproximar pares positivos, afastar negativos          |
+| **TripletLoss**           | Triplas (A, P, N)          | Relações relativas entre exemplos  | A é mais parecido com P do que com N                  |
+| **MNRL**                  | Pares positivos            | Binário com batches grandes        | Usa todos os pares do batch como negativos implícitos |
 
 ---
 
